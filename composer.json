@@ -1,0 +1,21 @@
+{
+    "name": "mingmingxianseng/wxcrop",
+    "description": "wechat",
+    "require": {
+        "php": ">=7.0",
+        "xltxlm/helper": "*",
+        "guzzlehttp/guzzle": "~6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*",
+        "friendsofphp/php-cs-fixer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mingmingxianseng\\wxcrop\\": [
+                "src/"
+            ]
+        }
+    }
+}
