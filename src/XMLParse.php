@@ -6,7 +6,7 @@
  * Time: 14:01
  */
 
-namespace Sdxapp\Wxcorp;
+namespace mmxs\wxcorp;
 
 class XMLParse
 {
@@ -16,6 +16,8 @@ class XMLParse
      * @param string $xmltext 待提取的xml字符串
      *
      * @return string 提取出的加密消息字符串
+     *
+     * @throws wxcorpException
      */
     static public function extract($xmltext)
     {
@@ -29,7 +31,7 @@ class XMLParse
 
             return [$encrypt, $tousername];
         } catch (\Exception $e) {
-            throw new WxcorpException($e->getMessage(), $e->getCode());
+            throw new wxcorpException($e->getMessage(), $e->getCode());
         }
     }
 
@@ -59,6 +61,7 @@ class XMLParse
      * @param string $xmltext 待提取的xml字符串
      *
      * @return string 提取加密后回调模式接口验证需要的参数
+     * @throws wxcorpException
      */
     static public function extractCallbackParamter($xmltext)
     {
@@ -72,7 +75,7 @@ class XMLParse
 
             return [$Encrypt, $MsgSignature, $TimeStamp, $Nonce];
         } catch (\Exception $e) {
-            throw new WxcorpException($e->getMessage(), $e->getCode());
+            throw new wxcorpException($e->getMessage(), $e->getCode());
         }
     }
 
@@ -82,6 +85,8 @@ class XMLParse
      * @param string $encrypt    加密后的消息密文
      * @param string $agentId    应用ID
      * @param string $tousername 企业ID
+     *
+     * @return string
      */
     public function generateCallbackXml($encrypt, $agentId, $tousername)
     {

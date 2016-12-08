@@ -1,11 +1,13 @@
 {
     "name": "mingmingxianseng/wxcrop",
     "description": "wechat",
-    "require": {
-        "php": ">=7.0",
-        "xltxlm/helper": "*",
-        "guzzlehttp/guzzle": "~6"
-    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chenmingming",
+            "email": "mingming0929@139.com"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "*",
         "squizlabs/php_codesniffer": "*",
@@ -13,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mingmingxianseng\\wxcrop\\": [
+            "mmxs\\wxcorp\\": [
                 "src/"
             ]
         }

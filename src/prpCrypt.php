@@ -6,7 +6,7 @@
  * Time: 11:50
  */
 
-namespace Sdxapp\Wxcorp;
+namespace mmxs\wxcorp;
 
 class PrpCrypt
 {
